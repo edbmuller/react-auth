@@ -1,49 +1,51 @@
 {
   "env": {
-    "es2020": true,
-    "node": true,
-    "jest": true
+    "browser": true,
+    "es6": true
   },
   "extends": [
-    "airbnb-base",
+    "plugin:react/recommended",
+    "airbnb",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
+    "react",
     "@typescript-eslint",
+    "react-hooks",
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
-    "no-useless-constructor": "off",
-    "no-unused-vars": "off",
     "camelcase": "off",
-    "@typescript-eslint/no-unused-vars": [
-    "error",
-    {
-      "argsIgnorePattern": "^_"
-    }
-  ],
-    // "@typescript-eslint/naming-convention": [
-    //   "error",
-    //   {
-    //     "selector": "interface",
-    //     "prefix": ["I"],
-    //     "format": ["PascalCase"]
-    //   }
-    // ],
-    "class-methods-use-this":"off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-expressions": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "prettier/prettier": "error",
     "import/extensions": [
       "error",
       "ignorePackages",
       {
-        "ts": "never"
+        "ts": "never",
+        "tsx": "never"
       }
     ]
   },
