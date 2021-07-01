@@ -17,7 +17,7 @@ export const Content = styled.div`
   justify-content: center;
 
   width: 100%;
-  max-width: 44rem;
+  max-width: 38rem;
 
   img {
     width: 14rem;
@@ -25,7 +25,7 @@ export const Content = styled.div`
 
   form {
     margin: 3rem 0;
-    width: 24rem;
+    width: 20rem;
     text-align: center;
 
     h1 {
